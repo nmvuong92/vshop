@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import ContentLoader, { Facebook } from 'react-content-loader';
 import Posts from './Posts';
+import Es from './Es';
 const MyLoader = () => (
   <ContentLoader viewBox="0 0 380 70">
     {/* Only SVG shapes */}    
@@ -36,6 +37,9 @@ function App() {
             <li>
               <Link to="/posts">Posts</Link>
             </li>
+            <li>
+              <Link to="/es">Es</Link>
+            </li>
           </ul>
         </div>
         <Switch>
@@ -51,8 +55,8 @@ function App() {
           <Route path="/to-do-list">
             <TodoList />
           </Route>
-          <Route path="/posts">
-            <Posts />
+          <Route path="/es">
+            <Es />
           </Route>
         </Switch>
     </Router>
@@ -81,4 +85,5 @@ function Dashboard() {
     </div>
   );
 }
+
 export default App;
